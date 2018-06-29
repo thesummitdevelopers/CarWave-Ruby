@@ -1,0 +1,105 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  background: url(./imagenes/bg.jpeg) no-repeat center;
+  background-size: cover;
+  font-family: sans-serif;
+  height: 100vh;
+  //zoom : 75%;
+}
+
+.registro {
+  width: 520px;
+  height: 720px;
+  background: #000;
+  color: #fff;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  padding: 70px 30px;
+}
+
+.registro .logo {
+  content: url(./imagenes/img_login2.png);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 50px);
+}
+
+.registro h1 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+  font-size: 22px;
+}
+.registro h3 {
+  margin: 0;
+  padding: 0 0 20px;
+  text-align: center;
+}
+.registro .juntos{
+  width: 46%;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+
+.registro label {
+  width: 100%;
+  margin-bottom: 20px;
+  margin-right: 60px;
+}
+
+.registro input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.registro input[type="text"], .registro input[type="password"] {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  outline: none;
+  height: 40px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.registro input[type="submit"] {
+  border: none;
+  outline: none;
+  height: 40px;
+  background: #00709e;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.registro input[type="submit"]:hover {
+  cursor: pointer;
+  background: #ffc107;
+  color: #000;
+}
+
+.registro a{
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: #11939A;
+}
+footer{
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 20px;
+  color: darkgrey;
+}
+
+.registro a:hover {
+  color: #fff;
+}
