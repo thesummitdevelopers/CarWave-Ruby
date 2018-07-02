@@ -1,0 +1,46 @@
+<%= form_with(model: @user, local: true) do |form| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="registro">
+    <%= link_to 'Back', users_path, class:'logo' %>
+    <h1>Editar Perfil</h1>
+    <h3>Alquileres seguros y confiables</h3>
+    <form>
+      <label for="password">Nombre(obligatorio)</label>
+      <label for="password">Apellidos(obligatorio)</label>
+
+      <%= form.text_field :nombres, placeholder:'Nombre', class: 'juntos'%>
+
+      <%= form.text_field :apellidos, placeholder:'Apellidos', class: 'juntos'%>
+
+      <label for="text">Introduce tu numero de telefono(obligatorio)</label>
+
+      <%= form.text_field :telefono, placeholder:'Numero de telefono' %>
+
+      <label for="password">Introduce tu email(obligatorio)</label>
+      <%= form.text_field :correo, placeholder:'Email' %>
+
+      <label for="password">Usuario</label>
+      <%= form.text_field :usuario, placeholder:'Usuario' %>
+
+      <label for="password">Contraseña</label>
+      <%= form.text_field :contrasena, placeholder:'Contraseña' %>
+
+      <%= form.submit 'Guardar Cambios'%>
+
+      <footer>Al registrate, aceptas las <a href="#">condiciones de uso</a> de CarWave y reconoces haber leido su <a href="#">politica de privacidad</a></footer>
+
+    </form>
+  </div>
+
+<% end %>

@@ -1,0 +1,105 @@
+.general{
+  background-color: rgba(0,0,0,0);
+  width: auto;
+  height: auto;
+}
+
+.barraNavegacion{
+  padding-bottom: 5px;
+}
+
+.desc {
+    color: solid black;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#nav{
+  background-color: #00709f;
+  width: 1366px;
+}
+
+#nav a:hover{
+  color: #faffa3;
+}
+
+#nav a{
+  display: inline-block;
+  padding: 0 50px 0 50px;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-shadow: #000 0 -1px 0;
+}
+
+#imagenes{
+  background-color: rgba(0,0,0,0);
+  width: 1366px;
+  height: 555px;
+  margin-left: 40px;
+}
+
+div.gallery {
+    margin: 25px;
+    border: 0px solid #FFFFFF;
+    background: #FFFFFF;
+    float: left;
+    width: 375px;
+    height: 234px;
+    text-align: center;
+}
+
+#imgBusqueda{
+  content: url(./imagenes/busqueda.png);
+}
+
+#logoIndex{
+  content: url(./imagenes/img_login2.png);
+}
+
+#imgParticular{
+  content: url(./imagenes/auto_particular.png);
+}
+#imgBus{
+  content: url(./imagenes/bus.png);
+}
+  #imgFamiliar{
+  content: url(./imagenes/auto_familiar.png);
+}
+#imgTaxi{
+  content: url(./imagenes/taxi.png);
+}
+#imgCamioneta{
+  content: url(./imagenes/camioneta.png);
+}
+#imgTodo{
+  content: url(./imagenes/ver_todo.png);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+div.gallery img:hover {
+    transform: scale(1.1);
+}
+
+input{
+  height: 30px;
+  width: 350px;
+  font-size: 20px;
+  padding-left: 5px;
+  border: none;
+}
+
+body  {
+    background: url(./imagenes/bg.jpeg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}

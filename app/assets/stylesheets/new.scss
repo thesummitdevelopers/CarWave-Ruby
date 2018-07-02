@@ -1,15 +1,15 @@
 
-body {
+.supergeneral {
   margin: 0;
   padding: 0;
   background: url(./imagenes/bg.jpeg) no-repeat center;
   background-size: cover;
   font-family: sans-serif;
   height: 100vh;
-  //zoom : 75%;
 }
 
 .registro {
+  zoom : 75%;
   width: 520px;
   height: 720px;
   background: #000;
