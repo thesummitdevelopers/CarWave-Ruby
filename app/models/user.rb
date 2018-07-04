@@ -6,5 +6,5 @@ class User
   field :correo, type: String
   field :usuario, type: String
   field :contrasena, type: String
-  embeds_many :pubicaciones
+  embeds_many :publications
 end

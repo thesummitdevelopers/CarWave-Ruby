@@ -1,56 +1,87 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Car-Wave</title>
-    <link rel="stylesheet" href="css/style_publicar.css">
-  </head>
-  <body>
-    <div class="general">
+<div class="general">
 
       <!-- Barra de navegación -->
       <div id="nav">
         <div class="barraNavegacion">
-          <a href="index.html"><img src="assets/img_login2.png" width="50px" heigth="50px"></a>
+          <a href='localhost:3000'><img id="logoIndex" width="50px" heigth="50px"></a>
           <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
-          <a id="img" href="publicacion.html"><img src="assets/busqueda.png" width="25px" heigth="25px"></a>
+          <a id="img" href="publicacion.html"><img id="imgBusqueda" width="25px" heigth="25px"></a>
 
         </div>
       </div>
 
       <div class="imagenesPrevias">
         <div class="item">
-          <img id="imgsumar1" width=auto height=100px>
+          <img id="imgPlus1" width=auto height=100px>
         </div>
 
         <div class="item">
-          <img id="imgsumar2" width=auto height=100px>
+          <img id="imgPlus2" width=auto height=100px>
         </div>
 
         <div class="item">
-          <img id="imgsumar3" width=auto height=100px>
+          <img id="imgPlus3" width=auto height=100px>
         </div>
 
         <div class="item">
-          <img id="imgsumar4" width=auto height=100px>
+          <img id="imgPlus4" width=auto height=100px>
         </div>
       </div>
 
       <div class="imagenCompleta">
         <div class="item">
-          <img id="imgsumar5" width=490px height=auto>
+          <img id="imgPlus0" width=490px height=auto>
         </div>
       </div>
 
       <div class="descripcion">
-        <textarea maxlength="30" placeholder="Título de la publicación" class="titulo"></textarea>
-        <textarea maxlength="120" placeholder="Agregue una descripción" class="cuerpo"></textarea>
-        <h1>Precio: S/.<input type="number" min="0" class="precio"></input></h1>
-        <button type="button">Publicar</button>
+        <%= form_for [@user, Publication.new] do |f|%>
+          <textarea maxlength="30" placeholder="Título de la publicación" class="titulo"></textarea>
+          <textarea maxlength="180" placeholder="Agregue una descripción" class="cuerpo"></textarea>
+          <h1>Precio: S/.<input type="number" min="0" class="precio"></input></h1>
+          <div class="adicional">
+            <h1>
+              <b>Información adicional:</b><br>
+              Placa: <%= f.text_field :placa %><br>
+              Modelo: <%= f.text_field :modelo %></input><br>
+              Marca:  <%= f.text_field :marca %></input><br>
+              Año: <%= f.text_field :year %></input><br>
+              Tipo: <%= select_tag(:Publication_id, options_for_select([['Taxi','Taxi'],['Buses','Buses'],['Particular','Particular'],['Familiar','Familiar'],['Camionetas','Camionetas'],['Otros','Otros']])) %>
+            </h1>
+          </div>
+          <%= f.submit 'Publicar'%>
+          <button type="button" id="cancelar">Cancelar</button>
+        <%end%>
       </div>
 
       <div class="anuncios">
-        <img id="anuncio" width="266" height="450">
+        <img id="imgAnuncio_publicar" width="266" height="450">
       </div>
-</body>
-</html>
+
+      <!-- Pie de página -->
+      <div class="footer">
+        <div class="infoContacto">
+          <img id="logoTSD" height="100%">
+
+          <h1>
+            Síguenos en:
+            <ul>
+              <li><a target="_blank" href="https://github.com/thesummitdevelopers"><i class="fab fa-github"></i></a></li>
+              <li><a target="_blank" href="https://www.facebook.com/The-Summit-Developers-1558704830808962/?ref=br_rs"><i class="fab fa-facebook"></i></a></li>
+              <li><a target="_blank" href="https://www.linkedin.com/in/oscar-molleapaza-flores-91541a151/"><i class="fab fa-linkedin"></i></a></li>
+              <li><a target="_blank" href="https://twitter.com/TheSummitDevel1"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </h1>
+        </div>
+        <div class="sopoTecnico">
+          <br>Soporte tecnico:
+          <h1>
+            ---------------- +51 997 794 482 ----------------
+            thesummitdevelopers@gmail.com
+          </h1>
+        </div>
+        <div class="copyright">
+          <br>© 2017-2018 TheSummitDevelopers Todos los derechos reservados.
+        </div>
+      </div>
+    </div>

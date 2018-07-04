@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'home/index'
   root 'home#index'
   resources :users do
+    resources :publications
     collection do
       get :login
     end
