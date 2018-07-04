@@ -1,35 +1,54 @@
-<p id="notice">PERFIL<%= notice %></p>
 
-<p>
-  <strong>Nombres:</strong>
-  <%= @user.nombres %>
-</p>
+  <div class="general">
+    <!-- Barra de navegación -->
+    <div id="nav">
+      <div class="barraNavegacion">
+        <%= link_to 'Back', root_path, id:'logoIndex'%>
+        <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
+        <a id="img" href="publicacion.html"><img id="imgBusqueda" width="25px" heigth="25px"></a>
+        <a href=>Publicaciones</a>
+        <a href=>Menú de carros</a>
+        <a href="">Publicar</a>
+      </div>
+    </div>
 
-<p>
-  <strong>Apellidos:</strong>
-  <%= @user.apellidos %>
-</p>
+    <div class="imagen">
+      <div class="img">
+        <img id="imgCabeza" width=200px height=200px>
+        <p>Colocar una imagen representativa</p>
+        <button type="button" name="button">Subir</button>
+      </div>
+    </div>
+    <div class="dato">
+      <div class="datos">
+          <p>
+            <strong>Nombres:</strong>
+            <p><% @user.nombres %></p>
+          </p>
+          <p>
+            <strong>Apellidos:</strong>
+            <% @user.apellidos %>
+          </p>
+          <p>
+            <strong>Telefono:</strong>
+            <% @user.telefono %>
+          </p>
+          <p>
+            <strong>Correo:</strong>
+            <% @user.correo %>
+          </p>
+          <p>
+            <strong>Usuario:</strong>
+            <% @user.usuario %>
+          </p>
+          <p>
+            <strong>Contraseña:</strong>
+            <% @user.contrasena %>
+          </p>
+          <%= link_to 'Edit', edit_user_path(@user) %> |
+          <%= link_to 'Logout', users_path %> |
+          <%= link_to 'Publicar', publicar_user_path(@user)%>
+       </div>
+    </div>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @user.telefono %>
-</p>
-
-<p>
-  <strong>Correo:</strong>
-  <%= @user.correo %>
-</p>
-
-<p>
-  <strong>Usuario:</strong>
-  <%= @user.usuario %>
-</p>
-
-<p>
-  <strong>Contrasena:</strong>
-  <%= @user.contrasena %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Logout', users_path %> |
-<%= link_to 'Publicar', publicar_user_path(@user)%>|
+  </div>

@@ -46,7 +46,6 @@
               Modelo: <%= f.text_field :modelo %></input><br>
               Marca:  <%= f.text_field :marca %></input><br>
               Año: <%= f.text_field :year %></input><br>
-              Tipo: <%= select_tag(:Publication_id, options_for_select([['Taxi','Taxi'],['Buses','Buses'],['Particular','Particular'],['Familiar','Familiar'],['Camionetas','Camionetas'],['Otros','Otros']])) %>
             </h1>
           </div>
           <%= f.submit 'Publicar'%>

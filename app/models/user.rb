@@ -7,4 +7,6 @@ class User
   field :usuario, type: String
   field :contrasena, type: String
   embeds_many :publications
+
+  accepts_nested_attributes_for :publications
 end
