@@ -1,1 +1,56 @@
-<p>Publica aqui</p>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Car-Wave</title>
+    <link rel="stylesheet" href="css/style_publicar.css">
+  </head>
+  <body>
+    <div class="general">
+
+      <!-- Barra de navegación -->
+      <div id="nav">
+        <div class="barraNavegacion">
+          <a href="index.html"><img src="assets/img_login2.png" width="50px" heigth="50px"></a>
+          <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
+          <a id="img" href="publicacion.html"><img src="assets/busqueda.png" width="25px" heigth="25px"></a>
+
+        </div>
+      </div>
+
+      <div class="imagenesPrevias">
+        <div class="item">
+          <img id="imgsumar1" width=auto height=100px>
+        </div>
+
+        <div class="item">
+          <img id="imgsumar2" width=auto height=100px>
+        </div>
+
+        <div class="item">
+          <img id="imgsumar3" width=auto height=100px>
+        </div>
+
+        <div class="item">
+          <img id="imgsumar4" width=auto height=100px>
+        </div>
+      </div>
+
+      <div class="imagenCompleta">
+        <div class="item">
+          <img id="imgsumar5" width=490px height=auto>
+        </div>
+      </div>
+
+      <div class="descripcion">
+        <textarea maxlength="30" placeholder="Título de la publicación" class="titulo"></textarea>
+        <textarea maxlength="120" placeholder="Agregue una descripción" class="cuerpo"></textarea>
+        <h1>Precio: S/.<input type="number" min="0" class="precio"></input></h1>
+        <button type="button">Publicar</button>
+      </div>
+
+      <div class="anuncios">
+        <img id="anuncio" width="266" height="450">
+      </div>
+</body>
+</html>

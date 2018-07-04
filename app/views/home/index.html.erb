@@ -3,11 +3,11 @@
     <!--Barra de navegación -->
     <div id="nav">
       <div class="barraNavegacion">
-        <a href='localhost:3000'><img id="logoIndex" width="50px" heigth="50px"></a>
+        <%= link_to 'Back', root_path, id:'logoIndex' %>
         <input type="text" id="busqueda" placeholder=" ¿Qué estás buscando?">
         <a id="img" href="publicacion.html">
           <img id="imgBusqueda" width="25px" heigth="25px"></a>
-        <a href="users/login">Ingresar</a>
+        <%= link_to 'Ingresar', login_path%>
         <a href="users/new">Registrarse</a>
         <a href="">Publicar</a>
       </div>
@@ -37,9 +37,9 @@
 
       <div class="gallery">
         <a href="home/resultado">
-          <img id="imgTodo">
+          <img id="imgCamioneta">
         </a>
-        <a href="home/resultado" class="desc">Ver todo</a>
+        <a href="home/resultado" class="desc">Camionetas</a>
       </div>
 
       <div class="gallery">
@@ -51,9 +51,11 @@
 
       <div class="gallery">
         <a href="home/resultado">
-          <img id="imgCamioneta">
+          <img id="imgTodo">
         </a>
-        <a href="home/resultado" class="desc">Camionetas</a>
+        <a href="home/resultado" class="desc">Ver todo</a>
       </div>
+
+
     </div>
   </div>
