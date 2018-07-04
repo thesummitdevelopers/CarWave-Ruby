@@ -1,8 +1,11 @@
 <% provide(:title, "Log in") %>
-<h1>Log in</h1>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+
+<div class="supergeneral">
+
+  <div class="login">
+    <%= link_to 'Back', root_path, class:'logo' %>
+    <h1>Log in</h1>
     <%= form_for(:session, url: login_path) do |f| %>
 
       <%= f.label :usuario %>
@@ -13,7 +16,7 @@
 
       <%= f.submit "Log in", class: "btn btn-primary" %>
     <% end %>
-
-    <p>New user? <%= link_to "Sign up now!", new_user_path %></p>
+    <a href="#">Olvidaste la Contraseña?</a><br>
+    <%= link_to "Eres Nuevo? Registrate", new_user_path %>
   </div>
 </div>

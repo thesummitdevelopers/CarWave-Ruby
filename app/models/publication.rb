@@ -11,6 +11,5 @@ class Publication
   field :year, type: String
   field :tipo, type: String
   validates_presence_of :attribute, :on => :create, :message => "Faltan Datos"
-  belongs_to :user
-  accepts_nested_attributes_for :user
+  embedded_in :user
 end

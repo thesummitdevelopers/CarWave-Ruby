@@ -6,7 +6,7 @@ class User
   field :correo, type: String
   field :usuario, type: String
   field :contrasena, type: String
-  embeds_many :publications
+  embeds_many :publications, store_as: "publicaciones"
 
   accepts_nested_attributes_for :publications
 end

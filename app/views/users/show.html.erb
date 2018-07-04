@@ -1,5 +1,34 @@
 
   <div class="general">
+
+    <p>
+      <strong>Nombres:</strong>
+      <% @user.nombres %>
+    </p>
+    <p>
+      <strong>Apellidos:</strong>
+      <% @user.apellidos %>
+    </p>
+    <p>
+      <strong>Telefono:</strong>
+      <% @user.telefono %>
+    </p>
+    <p>
+      <strong>Correo:</strong>
+      <% @user.correo %>
+    </p>
+    <p>
+      <strong>Usuario:</strong>
+      <% @user.usuario %>
+    </p>
+    <p>
+      <strong>Contraseña:</strong>
+      <% @user.contrasena %>
+    </p>
+    <%= link_to 'Edit', edit_user_path(@user) %> |
+    <%= link_to 'Logout', users_path %> |
+    <%= link_to 'Publicar', publicar_user_path(@user)%>
+
     <!-- Barra de navegación -->
     <div id="nav">
       <div class="barraNavegacion">
@@ -23,7 +52,7 @@
       <div class="datos">
           <p>
             <strong>Nombres:</strong>
-            <p><% @user.nombres %></p>
+            <% @user.nombres %>
           </p>
           <p>
             <strong>Apellidos:</strong>
